@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 colored = "2"
 tabled = "0.3.0"
+atoi = "0.4"
+nom = "6"

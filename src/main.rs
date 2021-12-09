@@ -1,7 +1,10 @@
-#![feature(array_windows)]
+#![feature(array_windows, drain_filter)]
+
 pub mod day1;
 pub mod day2;
 pub mod day3;
+pub mod day4;
+pub mod day5;
 
 use tabled::{Tabled, Table, Format, Modify, Column, Row, Header, Style, Alignment};
 
@@ -83,5 +86,25 @@ fn main() {
     let lf_supp = day3::solve_b().to_string();
     d3_ans.add(Answer{ part: "b", result: lf_supp });
 
-    d3_ans.out()
+    d3_ans.out();
+
+    // -- day 4 --
+    let mut d4_ans = Answers::new(4);
+    // day 4a
+    let scr_a = day4::solve_a().to_string();
+    d4_ans.add(Answer { part: "a", result: scr_a });
+
+    // day 4b
+    let scr_b = day4::solve_b().to_string();
+    d4_ans.add(Answer { part: "b", result: scr_b });
+
+    d4_ans.out();
+
+    // -- day 5 --
+    let mut d5_ans = Answers::new(4);
+    // day 5a
+    let overlap = day5::solve_a().to_string();
+    d5_ans.add(Answer { part: "a", result: overlap });
+    
+    d5_ans.out();
 }
